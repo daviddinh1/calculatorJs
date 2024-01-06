@@ -19,7 +19,24 @@ function divide(a,b){
  return a/b;
 }
 
+function operate(num1,num2,operator){
+  if(operator == '+'){
+    return add(num1,num2);
+  }
+  else if(operator == '-'){
+    return subtract(num1,num2);
+  }
+  else if(operator == '*'){
+    return multiply(num1,num2);
+  }
+  else{
+    return divide(num1,num2);
+  }
+}
+
 num1 = 2;
 num2 = 5;
+operator = '/';
 
-console.log(divide(num1,num2))
+const test = operate(num1,num2,operator);
+console.log(test);
